@@ -1,0 +1,15 @@
+Ivanenko Anna;91
+Petrenko Ivan;76
+Komarov Olha;97
+Shevchenko Maksym;84
+Bondarenko Sofia;79
+Melnyk Artem;88
+Kovalchuk Maria;95
+Tkachenko Danylo;67
+Kravchenko Polina;82
+Boyko Andrii;90
+Marchenko Yuliia;73
+Lysenko Oleksii;86
+Moroz Kateryna;99
+Savchenko Vladyslav;80
+Rudenko Anastasiia;93

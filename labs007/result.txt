@@ -1,0 +1,10 @@
+Moroz Kateryna;99
+Komarov Olha;97
+Kovalchuk Maria;95
+Rudenko Anastasiia;93
+Ivanenko Anna;91
+Boyko Andrii;90
+Melnyk Artem;88
+Lysenko Oleksii;86
+Shevchenko Maksym;84
+Kravchenko Polina;82

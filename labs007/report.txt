@@ -1,0 +1,8 @@
+Anna;4;10.75
+Ivan;4;9.75
+Olha;4;11.75
+Maksym;4;9.0
+Sofia;4;11.0
+Artem;4;8.5
+Maria;4;11.5
+Danylo;4;7.5
