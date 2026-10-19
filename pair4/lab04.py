@@ -84,6 +84,60 @@ p = ct.get(item)
 # середнім балом та пошук учня з найвищим середнім балом.
 # Незмінні дані групи (наприклад, назва групи та навчальний рік) збережіть у tuple. Перевіряйте, що кожен
 # учень має рівно 5 оцінок у діапазоні 1–12.
+naz = input("Введіть назву групи: ")
+rik = input("Введіть навчальний рік: ")
+nazrik = (naz, rik)
+diap = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"}
+slowuch = {}
+t = True
+while t == True:
+    pib = input("Введіть ПІБ учня, або enter для завершення вводу: ")
+    if pib == "":
+        break
+    else:
+        ocin = input("Введіть 5 оцінок від 1 до 12 через кому: ")
+        ocinka = ocin.split(",")
+        print(len(ocinka))
+        if len(ocinka) != 5:
+            print("Увага! Потрібно ввести 5 оцінок від 1 до 12 через кому. Ваш ввод не зараховано. Повторіть. ")
+        else:
+            t = False
+            numocin = []
+            for oc in ocinka:
+                if oc not in diap:
+                    t = True
+                    print("Увага! Потрібно ввести 5 оцінок від 1 до 12 через кому. Ваш ввод не зараховано. Повторіть. ")
+                else:
+                    numocin.append(int(oc))
+            if t == False:
+                slowuch[pib] = numocin
+                t= True
+
+print(slowuch)
+print(f"\nЖурнал групи {nazrik[0]}. Навчальний рік: {nazrik[1]} ")
+
+if not slowuch:
+    print("Журнал порожній.")
+else:
+    print("\nДрук журналу та середній бал кожного учня:")
+    for pib, ocinka in slowuch.items():
+        sru = sum(ocinka) / len(ocinka)
+        print(f"{pib}: {ocinka} | Середній бал: {sru:.2f}")
+
+    print("\nЖурнал рейтингу учнів")
+    sortuch = sorted(
+        slowuch.items(),
+        key=lambda item: sum(item[1]) / 5,
+        reverse=True
+    )
+    for i, (pib, ocinka) in enumerate(sortuch, start=1):
+        sru = sum(ocinka) / 5
+        print(f"{i}. {pib} — середній бал: {sru:.2f}")
+
+    naiuch = max(slowuch, key=lambda pib: sum(slowuch[pib]) / len(slowuch[pib]))
+    naisru = sum(slowuch[naiuch]) / 5
+    print(f"\nНайвищий середній бал у учня: {naiuch} ({naisru:.2f})")
+
 
 
 
